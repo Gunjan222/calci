@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,61 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.App {
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.cal-container {
+  display: flex;
+  background-color: #858694;
+  height: 120px;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.cal-item {
+  color: #fff;
+  font-size: 100px;
+  font-weight: normal;
+  text-align: right;
+  /* border: 1px solid red; */
+}
+.button-box {
+  background-color: #858694;
+  height: 134px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.button-container {
+  background-color: #e0e0e0;
+  height: 99%;
+  width: 24.948%;
+  font-size: 55px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.last-column {
+  background-color: #ffa500;
+  color: #fff;
+}
+.zero-button {
+  width: 50%;
+}
+
+.button {
+  /* background-color: transparent; */
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 60px;
+  font-weight: 400;
 }
