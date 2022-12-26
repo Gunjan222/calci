@@ -4,7 +4,7 @@ import "./App.css";
 function App() {
   const [input, setInput] = useState({
     firstNum: 0,
-    operator: "",
+    operator: "=",
     nextNum: 0,
   });
 
@@ -148,13 +148,12 @@ function App() {
           : input.firstNum,
       });
       console.log("first", typeof input.firstNum);
-    } else if (input.operator === "" && Number.isInteger(input.nextNum)) {
+    } else if (input.operator !== "" && Number.isInteger(input.nextNum)) {
       setInput({
         ...input,
-        nextNum:
-          Number(input.nextNum) % 1 !== 0
-            ? input.nextNum
-            : `${input.nextNum}` + ".",
+        nextNum: Number.isInteger(input.nextNum)
+          ? `${input.nextNum}` + "."
+          : input.nextNum,
       });
     } else {
       console.log("Already a decimal");
